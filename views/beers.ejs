@@ -1,1 +1,16 @@
-<h1>BEERS</h1>
+<div class="beer-page">
+  <% for( let i = 0; i< beersApi.length; i++ ) { %>
+  <a href="/beerId/<%-beersApi[i].id%>">
+    <div class="beer">
+      <img
+        src="<%= beersApi[i].image_url %>"
+        alt="beer image"
+        style="height: 100px"
+      />
+      <h3><%- beersApi[i].name %></h3>
+      <p><%- beersApi[i].description %></p>
+      <h6><%- beersApi[i].tagline%></h6>
+    </div>
+  </a>
+  <% } %>
+</div>
